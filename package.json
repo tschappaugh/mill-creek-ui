@@ -1,11 +1,12 @@
 {
   "name": "@tschappaugh/mill-creek-ui",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "module",
   "main": "./dist/mill-creek-ui.umd.cjs",
   "module": "./dist/mill-creek-ui.js",
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "import": "./dist/mill-creek-ui.js",
       "require": "./dist/mill-creek-ui.umd.cjs"
     }
