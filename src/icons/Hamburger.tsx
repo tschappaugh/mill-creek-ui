@@ -1,8 +1,3 @@
-interface HamburgerProps {
-  size?: number
-  className?: string
-}
-
 export function Hamburger({ size = 20, className }: HamburgerProps) {
   return (
     <svg
@@ -13,9 +8,8 @@ export function Hamburger({ size = 20, className }: HamburgerProps) {
       aria-hidden="true"
       className={className}
     >
-      <rect width="24" height="2" rx="1" fill="currentColor" />
-      <rect y="10" width="24" height="2" rx="1" fill="currentColor" />
-      <rect y="20" width="24" height="2" rx="1" fill="currentColor" />
+      <rect y="4" width="24" height="2" fill="currentColor" />
+      <rect y="16" width="24" height="2" fill="currentColor" />
     </svg>
   )
 }

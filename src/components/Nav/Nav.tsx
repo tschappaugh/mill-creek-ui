@@ -12,11 +12,8 @@ interface NavLink {
 }
 
 interface NavProps {
-  /** Logo element — typically an <img> or SVG */
   logo: ReactNode
-  /** Navigation links rendered in desktop nav and mobile menu */
   links: NavLink[]
-  /** Optional CTA button — shown left on desktop, below links on mobile */
   cta?: ReactNode
 }
 
@@ -25,14 +22,12 @@ export function Nav({ logo, links, cta }: NavProps) {
   const [mobileOpen, setMobileOpen] = useState(false)
   const menuId = useId()
 
-  // Adds a scroll listener to toggle the scrolled shadow state
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 0)
     window.addEventListener('scroll', handleScroll, { passive: true })
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  // Locks body scroll while mobile menu is open
   useEffect(() => {
     document.body.style.overflow = mobileOpen ? 'hidden' : ''
     return () => {
@@ -45,7 +40,7 @@ export function Nav({ logo, links, cta }: NavProps) {
       className={`
         fixed top-0 inset-x-0 z-50
         transition-all duration-300 ease-in-out
-        ${mobileOpen ? 'bg-mill-surface' : 'bg-mill-background'}
+        ${mobileOpen ? 'bg-mill-surface min-h-screen' : 'bg-mill-background'}
         ${scrolled && !mobileOpen
           ? 'shadow-[0_4px_12px_rgba(0,0,0,0.12)]'
           : 'shadow-[0_2px_8px_rgba(0,0,0,0.08)]'}
@@ -144,7 +139,7 @@ export function Nav({ logo, links, cta }: NavProps) {
             </a>
           ))}
           {cta && (
-            <div className="w-full px-[116px] pt-2">
+            <div className="w-full px-[116px] pt-2 flex justify-center">
               {cta}
             </div>
           )}
