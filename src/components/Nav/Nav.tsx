@@ -42,12 +42,11 @@ export function Nav({ logo, links, cta }: NavProps) {
         transition-all duration-300 ease-in-out
         ${mobileOpen ? 'bg-mill-surface min-h-screen' : 'bg-mill-background'}
         ${scrolled && !mobileOpen
-          ? 'shadow-[0_4px_12px_rgba(0,0,0,0.12)]'
-          : 'shadow-[0_2px_8px_rgba(0,0,0,0.08)]'}
+          ? 'shadow-[0_4px_12px_rgba(44,31,20,0.12)]'
+          : 'shadow-[0_2px_8px_rgba(44,31,20,0.08)]'}
       `}
     >
 
-      {/* Desktop layout — hidden on mobile, flex row on md+ */}
       <div
         className={`
           hidden lg:flex flex-row items-center
@@ -87,7 +86,6 @@ export function Nav({ logo, links, cta }: NavProps) {
         </nav>
       </div>
 
-      {/* Mobile bar — visible on mobile, hidden on md+ */}
       <div className="lg:hidden flex flex-row items-center h-16">
         <div className="flex-1 flex items-center justify-center pl-16">
           {logo}
@@ -102,7 +100,7 @@ export function Nav({ logo, links, cta }: NavProps) {
           className="
             size-16 flex items-center justify-center shrink-0
             text-mill-text-primary
-            focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-mill-text-primary
+            focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-mill-text-primary
           "
         >
           {mobileOpen
@@ -112,7 +110,6 @@ export function Nav({ logo, links, cta }: NavProps) {
         </button>
       </div>
 
-      {/* Mobile menu panel — only rendered when open */}
       {mobileOpen && (
         <nav
           id={menuId}

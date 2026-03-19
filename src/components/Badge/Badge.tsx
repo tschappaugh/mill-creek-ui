@@ -20,6 +20,7 @@ export function Badge({ label, variant = 'default', className }: BadgeProps) {
             px-3 py-1.5
             rounded
             text-xs font-semibold tracking-widest uppercase
+            font-['Source_Sans_3']
             ${variantStyles[variant]}
             ${className ?? ''}
         `}

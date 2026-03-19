@@ -15,13 +15,13 @@ export const Default: Story = {
   args: {
     children: (
       <div>
-        <h2 style={{ fontFamily: 'Cormorant Garamond', fontSize: 32, fontWeight: 300, marginBottom: 16 }}>
+        <h2 className="font-['Cormorant_Garamond'] text-[32px] font-light mb-4">
           Locally Sourced. Thoughtfully Made.
         </h2>
-        <p style={{ marginBottom: 12 }}>
+        <p className="mb-3">
           Every loaf we bake starts with ingredients we trust — sourced from farms and producers within our region who share our commitment to quality. List:
         </p>
-        <ul style={{ paddingLeft: 20, listStyleType: 'disc' }}>
+        <ul className="list-disc pl-5">
           <li>Organic flour from Marion Milling Co., Kansas City</li>
           <li>Fresh dairy from Shatto Dairy, Missouri</li>
           <li>Eggs from 2 Birds Farm</li>

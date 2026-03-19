@@ -1,3 +1,8 @@
+interface HamburgerProps {
+  size?: number
+  className?: string
+}
+
 export function Hamburger({ size = 20, className }: HamburgerProps) {
   return (
     <svg

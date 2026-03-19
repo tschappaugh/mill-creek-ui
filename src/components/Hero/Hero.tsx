@@ -34,7 +34,7 @@ export function Hero({ image, headline, subhead, body, cta }: HeroProps) {
           {subhead}
         </p>
 
-        <p className="w-full font-['Source_Sans_3'] font-normal text-[18px] leading-[1.333] text-center text-white">
+        <p className="w-full font-['Source_Sans_3'] font-normal text-[18px] leading-[1.333] text-center text-mill-background">
           {body}
         </p>
 

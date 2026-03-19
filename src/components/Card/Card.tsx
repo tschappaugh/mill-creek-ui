@@ -43,6 +43,7 @@ export function Card({
         transition-all duration-300 ease-in-out 
         hover:-translate-y-0.5 
         hover:shadow-md 
+        focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-mill-brand-dark
         ${variantStyles[variant]}
       `}
     >
@@ -72,6 +73,7 @@ export function Card({
 
         <h3
           className={`
+        font-['Cormorant_Garamond']
         font-light
         text-mill-text-primary
         leading-heading-s
@@ -82,7 +84,7 @@ export function Card({
         </h3>
 
         {excerpt && variant !== 'minimal' && (
-          <p className="text-sm leading-body-s text-mill-text-secondary">
+          <p className="font-['Source_Sans_3'] text-sm leading-body-s text-mill-text-secondary">
             {excerpt}
           </p>
         )}

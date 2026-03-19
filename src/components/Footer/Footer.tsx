@@ -52,7 +52,7 @@ export function Footer({ logo, links, copyright, socialLinks, className }: Foote
       {socialLinks.map(({ platform, href }) => {
         const Icon = socialIconMap[platform]
         return (
-          <a key={platform} href={href} aria-label={platform} className={socialIconClass}>
+          <a key={platform} href={href} aria-label={`Visit us on ${platform.charAt(0).toUpperCase() + platform.slice(1)}`} className={socialIconClass}>
             <Icon size={20} />
           </a>
         )
@@ -63,10 +63,8 @@ export function Footer({ logo, links, copyright, socialLinks, className }: Foote
   return (
     <footer className={`w-full bg-mill-text-primary pt-8 pb-12 ${className ?? ''}`}>
 
-      {/* Desktop layout */}
       <div className="hidden lg:flex flex-row items-center">
 
-        {/* Left — social icons + copyright, centered in column */}
         <div className="w-[300px] pl-10 shrink-0 flex flex-col items-center gap-6">
           {SocialIcons}
           <p className="font-['Source_Sans_3'] text-[16px] leading-[24px] font-normal text-mill-background text-center">
@@ -74,12 +72,10 @@ export function Footer({ logo, links, copyright, socialLinks, className }: Foote
           </p>
         </div>
 
-        {/* Center — logo */}
         <div className="flex-1 flex items-center justify-center">
           {logo}
         </div>
 
-        {/* Right — nav links, centered in column */}
         <nav
           aria-label="Footer navigation"
           className="w-[300px] pr-10 shrink-0 flex flex-col items-center gap-2"
@@ -93,7 +89,6 @@ export function Footer({ logo, links, copyright, socialLinks, className }: Foote
 
       </div>
 
-      {/* Mobile layout — logo → nav → social → copyright */}
       <div className="lg:hidden flex flex-col items-center gap-6 px-10">
         {logo}
 
