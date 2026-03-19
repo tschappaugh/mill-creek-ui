@@ -3,7 +3,7 @@ import { Button } from '../Button'
 import { Hero } from './Hero'
 
 const PlaceholderImage = () => (
-  <img src="/hero.jpg" alt="" className="absolute inset-0 w-full h-full object-cover" />
+  <div className="absolute inset-0 bg-mill-text-secondary" />
 )
 
 const meta: Meta<typeof Hero> = {

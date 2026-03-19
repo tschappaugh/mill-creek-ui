@@ -4,11 +4,8 @@ type ButtonBackground = 'light' | 'dark'
 
 /** @public */
 interface ButtonProps {
-  /** Button label */
   children: ReactNode
-  /** Color scheme — light for brand orange, dark for cream on dark sections */
   background?: ButtonBackground
-  /** Optional icon rendered to the right of the label */
   icon?: ReactNode
   disabled?: boolean
   onClick?: () => void
