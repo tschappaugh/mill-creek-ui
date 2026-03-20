@@ -27,7 +27,7 @@ export function ContentHeader({ level, heading, subtext, body, className }: Cont
   const s = styles[level]
 
   return (
-    <section className={`w-full px-10 ${className ?? ''}`}>
+    <section className={`w-full ${className ?? ''}`}>
       <div className={`flex flex-col items-center ${s.gap}`}>
 
         {level === 'h1'
