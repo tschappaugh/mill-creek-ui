@@ -13,11 +13,12 @@ interface NavLink {
 
 interface NavProps {
   logo: ReactNode
+  logoPrimary?: ReactNode
   links: NavLink[]
   cta?: ReactNode
 }
 
-export function Nav({ logo, links, cta }: NavProps) {
+export function Nav({ logo, logoPrimary, links, cta }: NavProps) {
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
   const menuId = useId()
@@ -59,7 +60,7 @@ export function Nav({ logo, links, cta }: NavProps) {
         </div>
 
         <div className="flex-1 flex items-center justify-center">
-          {logo}
+          {!scrolled && logoPrimary ? logoPrimary : logo}
         </div>
 
         <nav

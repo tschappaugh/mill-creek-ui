@@ -25,7 +25,7 @@ export function Hero({ image, headline, subhead, body, cta }: HeroProps) {
         "
       />
 
-      <div className="relative z-10 flex flex-col items-center justify-start gap-4 p-10 lg:py-14 lg:px-[171px] w-full h-full">
+      <div className="relative z-10 flex flex-col items-center justify-start gap-4 pt-24 pb-10 px-10 lg:pt-36 lg:pb-14 lg:px-[171px] w-full h-full">
         <h1 className="w-full font-['Cormorant_Garamond'] font-light text-[52px] leading-[1.231] lg:text-[64px] lg:leading-[1.125] text-center text-mill-background text-balance">
           {headline}
         </h1>
